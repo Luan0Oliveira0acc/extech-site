@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-gold: #DAA520;
+  --accent-gold-light: #FFD700;
+  --bg-dark: #000000;
+  --bg-dark-secondary: #0a0a0a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass-dark {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Card styles */
+.card {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(218, 165, 32, 0.2);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(218, 165, 32, 0.5);
+  box-shadow: 0 0 30px rgba(218, 165, 32, 0.2);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+  color: #000;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(218, 165, 32, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(218, 165, 32, 0.5);
+  background: linear-gradient(135deg, #FFD700 0%, #FFD700 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: 2px solid rgba(218, 165, 32, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(218, 165, 32, 1);
+  background: rgba(218, 165, 32, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Form inputs */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: rgba(218, 165, 32, 0.7);
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(156, 163, 175, 0.6);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(218, 165, 32, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(218, 165, 32, 0.7);
+}
+
+/* Responsive grid for what's included section */
+.what-included-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .what-included-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Responsive card padding */
+.responsive-card {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Testimonial card enhancements */
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.avatar-glow {
+  box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
+}
+
+.quote-icon {
+  opacity: 0.3;
+}
+
+.star-rating {
+  gap: 0.25rem;
+}
+
+/* Loading states */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Accent color utility */
+.text-accent-gold {
+  color: var(--accent-gold);
+}
+
+.border-accent-gold {
+  border-color: var(--accent-gold);
+}
+
+.bg-accent-gold {
+  background-color: var(--accent-gold);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea {
+  transition: all 0.3s ease;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
