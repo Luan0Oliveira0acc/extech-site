@@ -2,20 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'BLACK FRIDAY — Seu site profissional a partir de R$399',
-  description: 'Design minimalista, performance máxima e confiança que converte. Oferta especial Black Friday - Sites profissionais por apenas R$400.',
-  keywords: 'site profissional, black friday, web design, desenvolvimento web, site barato, landing page',
-  authors: [{ name: 'Desenvolvimento Profissional' }],
+  title: 'EX.TECH — Marketing Digital para Empresas de Serviços | BLACK FRIDAY',
+  description: 'Especialistas em gerar leads B2B e B2C para empresas de serviços. Site, redes sociais, tráfego pago e SEO. Você entrega, nós trazemos os clientes.',
+  keywords: 'marketing digital, empresas de serviços, geração de leads, tráfego pago, google ads, redes sociais, SEO local, B2B, B2C',
+  authors: [{ name: 'EX.TECH' }],
   openGraph: {
-    title: 'BLACK FRIDAY — Seu site profissional por apenas R$400',
-    description: 'Design minimalista, performance máxima e confiança que converte.',
+    title: 'EX.TECH — Marketing Digital para Empresas de Serviços',
+    description: 'Geração de leads qualificados para empresas de serviços. Presença digital completa.',
     type: 'website',
     locale: 'pt_BR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BLACK FRIDAY — Seu site profissional por apenas R$400',
-    description: 'Design minimalista, performance máxima e confiança que converte.',
+    title: 'EX.TECH — Marketing Digital para Empresas de Serviços',
+    description: 'Geração de leads qualificados para empresas de serviços.',
   },
   robots: {
     index: true,
